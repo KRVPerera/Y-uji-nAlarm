@@ -1,0 +1,14 @@
+alarmLabel = "BallerinaMailAlaram"
+
+smtpPort = 465
+smtpServer = "smtp.gmail.com"
+smtpServerLogin = ""
+smtpServerPassword = ""
+
+[[ccuser]]
+username = "user1"
+email = "user2@email.com"
+
+[[ccuser]]
+username = "user2"
+email = "user2@email.com"
