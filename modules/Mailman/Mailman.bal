@@ -40,7 +40,7 @@ public function sendEmail(string subject, string body) returns error? {
     email:Message email = {
         to: tofields,
         cc: ccfields,
-        subject: subject,
+        subject: alarmLabel + " " + subject,
         body: body
     };
     
