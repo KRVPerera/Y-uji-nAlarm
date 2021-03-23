@@ -4,6 +4,10 @@
 
 add your smtp server details to `Config.toml`. For gmail you may want to create an application password.
 
+## Running
+
+On vs code `Ballerina: Run` or `Ballerina: build` and then `bal run target/bin/Y_uji_nAlarm.jar`.
+
 ## Support simple one time notification e-mail
 
 Below request will send an e-mail with following details after 60 seconds.
