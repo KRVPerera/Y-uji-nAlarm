@@ -1,5 +1,4 @@
 alarmLabel = "BallerinaMailAlaram"
-alarmFrom = "ballerina.mail.alaram@email.com"
 
 smtpPort = 465
 smtpServer = "smtp.gmail.com"
