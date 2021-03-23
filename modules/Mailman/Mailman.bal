@@ -32,9 +32,14 @@ public function sendEmail(string subject, string body) returns error? {
         tofields.push(touser.email);
     }
 
+    string[] ccfields = [];
+    foreach UsersRecord ccuser in ccusers {
+        ccfields.push(ccuser.email);
+    }
+
     email:Message email = {
         to: tofields,
-        cc: ["receiver3@email.com", "receiver4@email.com"],
+        cc: ccfields,
         subject: subject,
         body: body
     };
