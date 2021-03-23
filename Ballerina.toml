@@ -1,0 +1,7 @@
+[package]
+org = "rukshanp"
+name = "Y_uji_nAlarm"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
