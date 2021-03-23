@@ -35,8 +35,8 @@ public function sendEmail(string subject, string body) returns error? {
     email:Message email = {
         to: tofields,
         cc: ["receiver3@email.com", "receiver4@email.com"],
-        subject: "Sample Email 3",
-        body: "This is a sample email."
+        subject: subject,
+        body: body
     };
     
     check smtpClient->sendMessage(email);
