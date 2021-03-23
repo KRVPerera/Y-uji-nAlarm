@@ -18,7 +18,7 @@ class Notification {
 
     public function execute() {
         error? sendEmail = mm:sendEmail(self.emailRecord.subject, self.emailRecord.body);
-        if (sendEmail is error) {
+        if sendEmail is error {
             log:printError("Could not send email", 'error=sendEmail);
         }
     }
