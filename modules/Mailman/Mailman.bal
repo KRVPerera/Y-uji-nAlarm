@@ -1,11 +1,11 @@
 import ballerina/email;
+import ballerina/log;
 
 configurable string alarmLabel = ?;
 configurable int smtpPort = ?;
 configurable string smtpServer = ?;
 configurable string smtpServerLogin = ?;
 configurable string smtpServerPassword = ?;
-
 
 type UsersRecord record {|
     readonly string username;
@@ -18,6 +18,7 @@ configurable Users & readonly ccusers = ?;
 configurable Users & readonly tousers = ?;
 
 email:SmtpConfiguration smtpConfig = {port: smtpPort};
+email:SmtpClient smtpClient = check new(smtpServer, smtpServerLogin, smtpServerPassword, smtpConfig);
 
 # Send a simple e-mail
 #
@@ -37,7 +38,7 @@ public function sendEmail(string subject, string body) returns error? {
         subject: "Sample Email 3",
         body: "This is a sample email."
     };
-
-    var smtpClient = check new email:SmtpClient(smtpServer, smtpServerLogin, smtpServerPassword, smtpConfig);
+    
     check smtpClient->sendMessage(email);
+    log:printDebug("e-mail sent");
 }

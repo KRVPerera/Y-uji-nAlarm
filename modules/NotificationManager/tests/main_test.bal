@@ -1,4 +1,5 @@
 import ballerina/test;
+import ballerina/io;
 
 # Before Suite Function
 @test:BeforeSuite
@@ -17,11 +18,8 @@ function beforeFunc() {
     after: afterFunc
 }
 function testFunction() {
-    string subject = "exampleSubject";
-    string body = "this is a sample body";
-
-    // io:println("I'm in test function!");
-    // error? sendEmailResult = sendEmail(subject, body);
+   var time = currentCivil(); 
+   io:println("time : ", time);
 }
 
 # After test function
